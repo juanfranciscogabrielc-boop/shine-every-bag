@@ -1,0 +1,862 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Shine Every Bags</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Diseño: vidriera editorial. Un arco dorado en el hero; el resto, líneas finas y mucho aire. Un solo tema oscuro. */
+:root{
+  color-scheme:dark;
+  --negro:#0B0B0B; --carbon:#141414; --humo:#1d1b17;
+  --oro:#D4AF37; --champagne:#E5C158;
+  --marfil:#F8F6F0; --perla:#B8B4A8;
+  --linea:rgba(212,175,55,.28); --linea-fuerte:rgba(212,175,55,.6);
+  --brillo:0 0 0 1px rgba(229,193,88,.35),0 14px 40px -12px rgba(212,175,55,.35);
+  --serif:"Cormorant Garamond","Playfair Display",Garamond,Georgia,serif;
+  --sans:"Plus Jakarta Sans",Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--negro);color:var(--marfil);font:400 15px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--negro);z-index:40}
+.wrap{max-width:1280px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media(min-width:760px){.wrap{padding-left:max(32px,env(safe-area-inset-left,0px));padding-right:max(32px,env(safe-area-inset-right,0px))}}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:500;line-height:1.08;margin:0;text-wrap:balance}
+h2{font-size:clamp(2.1rem,4.6vw,3.4rem)}
+p{margin:0}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer;background:none;border:0;padding:0}
+:focus-visible{outline:2px solid var(--champagne);outline-offset:3px}
+svg{display:block}
+.ico{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex:none}
+em{font-style:italic;color:var(--champagne)}
+
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 26px;border:1px solid var(--oro);font-weight:600;font-size:13px;letter-spacing:.06em;text-align:center;transition:box-shadow .35s,background .35s,color .35s,transform .35s}
+.btn::after{content:"";position:absolute;top:0;bottom:0;width:40%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,248,220,.5),transparent);transform:skewX(-20deg);transition:left .7s}
+.btn:hover::after{left:130%}
+.btn:hover{box-shadow:var(--brillo)}
+.btn-oro{background:linear-gradient(115deg,var(--oro),var(--champagne) 55%,var(--oro));color:var(--negro)}
+.btn-linea{color:var(--champagne)}
+.btn-linea:hover{background:rgba(212,175,55,.1)}
+.btn-ancho{width:100%}
+
+/* Anuncio */
+.anuncio{background:linear-gradient(90deg,#b8952c,var(--champagne),#b8952c);color:var(--negro);font-size:12px;font-weight:600;letter-spacing:.03em}
+.anuncio ul{list-style:none;margin:0;padding-block:8px;display:flex;justify-content:center;gap:12px;text-align:center}
+.anuncio li{display:none}
+.anuncio li.activo{display:block}
+@media(min-width:960px){.anuncio ul{justify-content:space-between}.anuncio li{display:block}}
+
+/* Encabezado */
+header.sitio{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:rgba(11,11,11,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--linea)}
+.cabecera{display:grid;grid-template-columns:auto 1fr auto;grid-template-areas:"menu logo acciones" "buscar buscar buscar";align-items:center;column-gap:8px;row-gap:8px;padding-block:10px}
+.abrir-menu{grid-area:menu}
+.logo{grid-area:logo;justify-self:center;text-align:center;line-height:1;font-family:var(--serif)}
+.logo b{display:block;font-weight:500;font-size:clamp(1.55rem,6vw,2.5rem);font-style:italic;letter-spacing:.01em;background:linear-gradient(100deg,#b8952c,#f4dc8f 45%,var(--oro) 70%,#f4dc8f);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 .08em}
+.logo span{display:block;font-family:var(--sans);font-size:9px;font-weight:600;letter-spacing:.52em;text-transform:uppercase;color:var(--perla);margin-top:2px;padding-left:.52em}
+.buscador{grid-area:buscar;display:flex;align-items:center;border:1px solid var(--linea);background:var(--carbon);min-width:0;transition:border-color .3s,box-shadow .3s}
+.buscador:focus-within{border-color:var(--oro);box-shadow:var(--brillo)}
+.buscador input{flex:1;min-width:0;background:transparent;border:0;outline:0;padding:10px 14px;font-size:16px}
+.buscador input::placeholder{color:var(--perla);font-size:13px}
+.buscador button{padding:10px 14px;color:var(--champagne)}
+.acciones{grid-area:acciones;display:flex;justify-content:flex-end}
+.accion{position:relative;display:grid;place-items:center;width:42px;height:42px;transition:color .3s,filter .3s}
+.accion:hover{color:var(--champagne);filter:drop-shadow(0 0 8px rgba(229,193,88,.7))}
+.contador{position:absolute;top:2px;right:0;min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:var(--champagne);color:var(--negro);font:700 10.5px/18px var(--sans);text-align:center;font-variant-numeric:tabular-nums}
+.contador.salto{animation:salto .5s}
+@keyframes salto{40%{transform:scale(1.45)}}
+.solo-pc{display:none}
+@media(max-width:379px){.accion{width:36px}}
+nav.principal{display:none}
+@media(min-width:960px){
+  .cabecera{grid-template-columns:1fr auto 1fr;grid-template-areas:"buscar logo acciones";padding-block:18px 12px}
+  .abrir-menu{display:none}
+  .buscador{max-width:340px}
+  .buscador input{font-size:14px}
+  .solo-pc{display:grid}
+  nav.principal{display:block;border-top:1px solid var(--linea)}
+  nav.principal>ul{display:flex;justify-content:center;gap:44px;list-style:none;margin:0;padding-block:0}
+}
+.principal li{position:relative}
+.nav-link{display:flex;align-items:center;gap:6px;padding:13px 0;font-size:12.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;background-image:linear-gradient(var(--champagne),var(--champagne));background-size:0 1px;background-position:50% 100%;background-repeat:no-repeat;transition:background-size .35s,color .35s}
+.nav-link:hover{background-size:100% 1px;color:var(--champagne)}
+.nav-link.destacado{color:var(--champagne)}
+.sub{position:absolute;top:100%;left:50%;width:220px;margin:0;padding:10px 0;list-style:none;background:var(--carbon);border:1px solid var(--linea-fuerte);box-shadow:0 24px 50px #000a;opacity:0;visibility:hidden;transform:translate(-50%,8px);transition:.25s}
+.con-sub:hover .sub,.con-sub:focus-within .sub{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.con-sub.cerrado .sub{opacity:0;visibility:hidden}
+.sub a{display:block;padding:9px 24px;font-family:var(--serif);font-size:1.25rem;transition:.25s}
+.sub a:hover{color:var(--champagne);padding-left:30px;background:rgba(212,175,55,.07)}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--linea);background:radial-gradient(70% 80% at 75% 30%,#2a2314,transparent 70%),var(--negro)}
+.hero .wrap{display:grid;gap:40px;padding-block:44px 52px;align-items:center}
+.hero h1{font-size:clamp(3.1rem,8.5vw,6.6rem);line-height:.95;letter-spacing:-.015em}
+.hero h1 em{display:block;padding-bottom:.06em}
+.hero .bajada{color:var(--perla);max-width:44ch;margin-top:22px;font-size:16px}
+.hero .botones{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero .botones .btn{flex:1 1 200px}
+@media(min-width:560px){.hero .botones .btn{flex:0 0 auto}}
+.promos{display:flex;flex-wrap:wrap;margin-top:38px;border-block:1px solid var(--linea)}
+.promos div{flex:1 1 150px;padding:16px 18px 16px 0}
+.promos div+div{padding-left:18px;border-left:1px solid var(--linea)}
+.promos strong{display:block;white-space:nowrap;font:500 clamp(1.6rem,7.5vw,2rem)/1 var(--serif);color:var(--champagne);font-variant-numeric:lining-nums}
+.promos span{font-size:12px;color:var(--perla)}
+.vidriera{position:relative;justify-self:center;width:min(100%,520px);aspect-ratio:4/4.6}
+.arco{position:absolute;inset:0 9% 7%;border:1px solid var(--linea-fuerte);border-radius:999px 999px 0 0;background:linear-gradient(180deg,#3a301b 0%,#17140e 55%,#0d0c0a 100%);overflow:hidden}
+.arco::before{content:"";position:absolute;inset:12px 12px 0;border:1px solid var(--linea);border-bottom:0;border-radius:999px 999px 0 0}
+.arco::after{content:"";position:absolute;inset:-20% auto -20% -60%;width:35%;background:linear-gradient(90deg,transparent,rgba(255,236,170,.14),transparent);transform:rotate(14deg);animation:barrido 7s ease-in-out infinite}
+@keyframes barrido{0%,25%{left:-60%}75%,100%{left:140%}}
+.vidriera .pieza{position:absolute;filter:drop-shadow(0 22px 22px #000b)}
+.pieza.grande{width:80%;left:10%;bottom:9%;animation:flotar 7s ease-in-out infinite}
+.pieza.chica{width:38%;right:-3%;bottom:-3%}
+.pieza.mini{width:33%;left:-3%;top:27%;animation:flotar 8s ease-in-out -3s infinite}
+.pieza svg{width:100%;height:auto}
+@keyframes flotar{50%{transform:translateY(-9px)}}
+.sello{position:absolute;right:0;top:12%;width:108px;height:108px;border-radius:50%;display:grid;place-content:center;text-align:center;background:var(--negro);border:1px solid var(--oro);outline:1px solid var(--linea);outline-offset:5px;font-size:10.5px;letter-spacing:.08em;color:var(--perla);line-height:1.3}
+.sello b{display:block;font:500 2.4rem/1 var(--serif);color:var(--champagne);font-variant-numeric:lining-nums}
+@media(min-width:900px){.hero .wrap{grid-template-columns:1.1fr 1fr;padding-block:64px 72px}}
+
+/* Beneficios */
+.beneficios{background:var(--carbon);border-bottom:1px solid var(--linea)}
+.beneficios ul{list-style:none;margin:0;padding-block:26px;display:grid;grid-template-columns:1fr 1fr;gap:24px 16px}
+.beneficios li{display:flex;flex-direction:column;gap:8px;min-width:0}
+.beneficios .ico{width:28px;height:28px;color:var(--champagne);stroke-width:1.2}
+.beneficios h3{font-size:1.3rem}
+.beneficios p{font-size:12.5px;color:var(--perla);line-height:1.5}
+@media(min-width:900px){.beneficios ul{grid-template-columns:repeat(4,1fr)}.beneficios li{flex-direction:row;align-items:flex-start;gap:16px}}
+
+section{scroll-margin-top:150px}
+.bloque{padding-block:72px}
+.titulo{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 32px;margin-bottom:32px}
+.titulo p{color:var(--perla);max-width:46ch;font-size:14px}
+
+/* Catálogo */
+.filtros{display:flex;flex-direction:column;gap:14px;border-block:1px solid var(--linea);padding:16px 0;margin-bottom:18px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:3px;scrollbar-width:thin}
+.chip{flex:none;display:flex;align-items:center;gap:7px;padding:8px 18px;border:1px solid var(--linea);font-size:12.5px;font-weight:500;transition:.3s}
+.chip:hover{border-color:var(--champagne);box-shadow:var(--brillo)}
+.chip[aria-pressed="true"]{background:var(--champagne);border-color:var(--champagne);color:var(--negro);font-weight:700}
+.chip .ico{width:15px;height:15px}
+.controles{display:flex;flex-wrap:wrap;gap:10px}
+.campo{display:flex;flex-direction:column;gap:5px;font-size:12px;color:var(--perla);min-width:0}
+.controles .campo{flex:1 1 140px}
+.campo input,.campo select,.campo textarea{width:100%;background:var(--carbon);border:1px solid var(--linea);padding:10px 12px;color:var(--marfil);font-size:16px;border-radius:0}
+.campo select option{background:var(--carbon)}
+@media(min-width:760px){.chips{flex-wrap:wrap;overflow:visible}.controles{align-self:flex-end;width:min(100%,420px)}.campo select{font-size:14px}}
+.estado{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;color:var(--perla);font-size:13px;margin-bottom:22px}
+.enlace{color:var(--champagne);text-decoration:underline;text-underline-offset:4px;font-size:13px}
+.grilla{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 12px}
+@media(min-width:760px){.grilla{grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 22px}}
+@media(min-width:1120px){.grilla{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.producto{display:flex;flex-direction:column;min-width:0}
+.foto{position:relative;aspect-ratio:1/1.08;border:1px solid var(--linea);background:radial-gradient(80% 65% at 50% 35%,#40372a,#1a1713 65%,#110f0d);overflow:hidden;transition:border-color .4s,box-shadow .4s}
+.foto>svg,.foto>img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.producto:hover .foto{border-color:var(--linea-fuerte);box-shadow:var(--brillo)}
+.producto:hover .foto>svg,.producto:hover .foto>img{transform:scale(1.07)}
+.etiqueta{position:absolute;top:10px;left:10px;z-index:1;padding:3px 9px;font-size:10.5px;font-weight:700;letter-spacing:.06em;background:var(--champagne);color:var(--negro)}
+.etiqueta.nuevo{background:var(--negro);color:var(--champagne);border:1px solid var(--oro)}
+.fav{position:absolute;top:6px;right:6px;z-index:1;width:38px;height:38px;display:grid;place-items:center;border-radius:50%;background:rgba(11,11,11,.6);transition:.3s}
+.fav:hover{color:var(--champagne);box-shadow:var(--brillo)}
+.fav[aria-pressed="true"]{color:var(--champagne)}
+.fav[aria-pressed="true"] .ico{fill:var(--champagne)}
+.linea-nombre{margin-top:14px;font-size:11.5px;color:var(--perla)}
+.producto h3{font-size:clamp(1.2rem,2.4vw,1.5rem);margin:2px 0 8px}
+.precios{margin-top:auto;font-variant-numeric:tabular-nums}
+.precio{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 10px;font-weight:700;font-size:17px}
+.precio s{font-weight:400;font-size:12.5px;color:var(--perla)}
+.mayor{font-size:12px;color:var(--champagne);margin-bottom:12px}
+.producto .btn{min-height:44px;padding:9px 10px;font-size:12px;color:var(--champagne)}
+.producto .btn:hover,.producto .btn.listo{background:var(--champagne);color:var(--negro)}
+.vacio{grid-column:1/-1;text-align:center;border:1px solid var(--linea);padding:56px 20px;display:grid;gap:14px;justify-items:center}
+.vacio p{color:var(--perla)}
+
+/* Categorías y líneas */
+.categorias{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.cat{position:relative;display:flex;flex-direction:column;justify-content:flex-end;border:1px solid var(--linea);background:linear-gradient(170deg,#2c2618,#11100d 70%);padding:14px;transition:.4s;overflow:hidden}
+.cat:first-child{grid-column:span 2}
+.cat svg{width:100%;max-width:230px;margin:0 auto;aspect-ratio:1;transition:transform .6s}
+.cat:hover{border-color:var(--champagne);box-shadow:var(--brillo)}
+.cat:hover svg{transform:translateY(-8px) scale(1.05)}
+.cat h3{font-size:1.7rem}
+.cat span{font-size:12px;color:var(--champagne)}
+@media(min-width:900px){.categorias{grid-template-columns:repeat(5,minmax(0,1fr))}.cat:first-child{grid-column:auto}}
+.marcas{border-block:1px solid var(--linea);background:var(--carbon)}
+.lineas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--linea);border-left:1px solid var(--linea)}
+.marca{border-right:1px solid var(--linea);border-bottom:1px solid var(--linea);padding:34px 16px;text-align:center;transition:.35s}
+.marca b{display:block;font:italic 500 clamp(1.7rem,4vw,2.5rem)/1.1 var(--serif)}
+.marca span{font-size:12px;color:var(--perla)}
+.marca:hover{background:rgba(212,175,55,.09);box-shadow:inset 0 0 0 1px var(--oro)}
+.marca:hover b{color:var(--champagne)}
+@media(min-width:900px){.lineas{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+/* Mayorista */
+.mayorista{display:grid;gap:36px;border:1px solid var(--linea-fuerte);padding:32px 22px;outline:1px solid var(--linea);outline-offset:6px;background:radial-gradient(90% 100% at 0 0,#2a2314,transparent 70%)}
+.mayorista>div{min-width:0}
+.mayorista .intro p{color:var(--perla);margin:18px 0 26px;max-width:46ch}
+.pasos{list-style:none;margin:0;padding:0;counter-reset:p}
+.pasos li{counter-increment:p;display:grid;grid-template-columns:52px 1fr;gap:8px;padding:20px 0;border-top:1px solid var(--linea)}
+.pasos li::before{content:counter(p);font:italic 500 2.6rem/1 var(--serif);color:var(--champagne)}
+.pasos h3{font-size:1.45rem;margin-bottom:4px}
+.pasos p{font-size:13.5px;color:var(--perla)}
+@media(min-width:900px){.mayorista{grid-template-columns:1fr 1fr;padding:56px}}
+
+/* Footer */
+footer{border-top:1px solid var(--linea);background:var(--carbon);font-size:13.5px}
+footer .cols{display:grid;gap:34px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));padding-block:56px 36px}
+footer h4{font-size:1.4rem;color:var(--champagne);margin-bottom:14px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:9px;justify-items:start}
+footer li,footer p{color:var(--perla)}
+footer li a:hover,footer li button:hover{color:var(--champagne)}
+footer li button{text-align:left}
+.redes{display:flex;gap:10px;margin-top:18px}
+.redes a{display:grid;place-items:center;width:42px;height:42px;border:1px solid var(--linea);color:var(--marfil);transition:.3s}
+.redes a:hover{color:var(--champagne);border-color:var(--champagne);box-shadow:var(--brillo)}
+.legal{border-top:1px solid var(--linea);padding-block:18px 26px;font-size:12px;color:var(--perla);text-align:center}
+
+/* Paneles */
+dialog{color:var(--marfil);background:var(--carbon);border:0;padding:0}
+dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(3px)}
+dialog[open]{display:flex;flex-direction:column}
+.panel{position:fixed;inset:0 0 0 auto;margin:0;width:min(460px,100%);max-width:100%;height:100%;max-height:100%;border-left:1px solid var(--linea-fuerte);animation:entra .4s cubic-bezier(.2,.7,.2,1)}
+.panel.izq{inset:0 auto 0 0;border-left:0;border-right:1px solid var(--linea-fuerte);width:min(360px,90%);animation-name:entra-izq}
+@keyframes entra{from{transform:translateX(100%)}}
+@keyframes entra-izq{from{transform:translateX(-100%)}}
+.panel-cab{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:calc(env(safe-area-inset-top,0px) + 14px) 20px 14px;border-bottom:1px solid var(--linea)}
+.panel-cab h2{font-size:1.9rem}
+.panel-cuerpo{flex:1;overflow-y:auto;overscroll-behavior:contain;padding:18px 20px calc(env(safe-area-inset-bottom,0px) + 28px)}
+.modal{margin:auto;width:min(520px,calc(100% - 32px));max-height:min(640px,calc(100% - 32px));border:1px solid var(--linea-fuerte)}
+.modal .panel-cab{padding-top:14px}
+.modal .panel-cuerpo{padding-bottom:24px}
+.modal p+p{margin-top:12px}
+.form{display:grid;gap:14px}
+.item{display:grid;grid-template-columns:74px minmax(0,1fr) auto;gap:14px;padding:14px 0;border-bottom:1px solid var(--linea)}
+.item .foto{aspect-ratio:1;align-self:start}
+.item h3{font-size:1.25rem}
+.item small{display:block;color:var(--perla);font-size:12px;font-variant-numeric:tabular-nums}
+.cantidad{display:inline-flex;align-items:center;border:1px solid var(--linea);margin-top:8px}
+.cantidad button{width:36px;height:34px;font-size:18px;color:var(--champagne)}
+.cantidad button:hover{background:rgba(212,175,55,.14)}
+.cantidad input{width:46px;height:34px;text-align:center;background:transparent;border:0;border-inline:1px solid var(--linea);font-size:16px;-moz-appearance:textfield;appearance:textfield}
+.cantidad input::-webkit-inner-spin-button{display:none}
+.item .der{display:flex;flex-direction:column;align-items:flex-end;justify-content:space-between;font-weight:700;font-variant-numeric:tabular-nums}
+.quitar{font-size:12px;font-weight:400;color:var(--perla);text-decoration:underline;text-underline-offset:3px}
+.meta{margin-top:18px;border:1px solid var(--linea);padding:14px;font-size:13px}
+.barra{height:4px;background:var(--humo);margin-top:10px}
+.barra i{display:block;height:100%;background:linear-gradient(90deg,var(--oro),var(--champagne));transition:width .5s}
+fieldset{border:0;padding:0;margin:20px 0 0;min-width:0;display:grid;gap:8px}
+legend{font:500 1.35rem var(--serif);padding:0;margin-bottom:8px}
+.pago{display:flex;gap:10px;align-items:center;border:1px solid var(--linea);padding:11px 14px;cursor:pointer;font-size:13.5px}
+.pago:has(input:checked){border-color:var(--champagne);background:rgba(212,175,55,.09)}
+input[type=radio]{accent-color:var(--champagne)}
+.totales{margin:20px 0;display:grid;gap:8px;font-variant-numeric:tabular-nums}
+.totales div{display:flex;justify-content:space-between;gap:16px}
+.totales dt{color:var(--perla)}
+.totales dd{margin:0;text-align:right}
+.totales .desc dt,.totales .desc dd{color:var(--champagne)}
+.totales .total{border-top:1px solid var(--linea-fuerte);padding-top:12px;font:500 1.9rem var(--serif);font-variant-numeric:lining-nums tabular-nums}
+.totales .total dt{color:var(--marfil)}
+.totales .total dd{color:var(--champagne)}
+.nota{font-size:12px;color:var(--perla);margin-top:10px;text-align:center}
+#texto-pedido{margin-top:12px;font-size:13px}
+.menu-lista{list-style:none;margin:0;padding:0}
+.menu-lista>li{border-bottom:1px solid var(--linea)}
+.menu-lista a,.menu-lista summary{display:block;padding:14px 0;font:500 1.55rem var(--serif);cursor:pointer}
+.menu-lista summary::after{content:"+";float:right;color:var(--champagne)}
+.menu-lista details[open] summary::after{content:"−"}
+.menu-lista summary{list-style:none}
+.menu-lista summary::-webkit-details-marker{display:none}
+.menu-lista details a{font-size:1.2rem;padding:8px 0 8px 18px;color:var(--perla)}
+.aviso{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 18px);z-index:50;width:max-content;max-width:calc(100% - 32px);transform:translate(-50%,16px);opacity:0;visibility:hidden;background:var(--marfil);color:var(--negro);border:1px solid var(--oro);padding:12px 20px;font-size:13px;font-weight:600;text-align:center;transition:.35s}
+.aviso.ver{opacity:1;visibility:visible;transform:translate(-50%,0)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+
+<svg hidden xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 7h18M3 12h13M3 17h18"/></symbol>
+  <symbol id="i-lupa" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4.5 4.2-6 8-6s7 1.500 8 6"/></symbol>
+  <symbol id="i-cora" viewBox="0 0 24 24"><path d="M12 20S3.5 15 3.500 8.8A4.4 4.4 0 0 1 12 7a4.4 4.4 0 0 1 8.5 1.800C20.500 15 12 20 12 20Z"/></symbol>
+  <symbol id="i-bolsa" viewBox="0 0 24 24"><path d="M5 8h14l1 13H4ZM8.500 10V7a3.500 3.500 0 0 1 7 0v3"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></symbol>
+  <symbol id="i-envio" viewBox="0 0 24 24"><path d="M2 6h12v11H2zM14 10h4l4 4v3h-8"/><circle cx="6.500" cy="18" r="1.800"/><circle cx="17.500" cy="18" r="1.800"/></symbol>
+  <symbol id="i-escudo" viewBox="0 0 24 24"><path d="M12 3 4.500 6v6c0 4.5 3.200 7.600 7.500 9 4.300-1.400 7.500-4.500 7.500-9V6Z"/><path d="m8.500 12 2.5 2.500 4.500-5"/></symbol>
+  <symbol id="i-precio" viewBox="0 0 24 24"><path d="M3 12V3h9l9 9-9 9Z"/><circle cx="8" cy="8" r="1.500"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 20l1.400-4.200A8.500 8.500 0 1 1 8.500 19Z"/><path d="M8.500 10.500h7M8.500 13.500h4.500"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3.500" y="3.500" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17 7h.01"/></symbol>
+  <symbol id="i-face" viewBox="0 0 24 24"><path d="M14.500 8H17V4h-2.500C12 4 10.500 5.700 10.500 8.300V11H8v4h2.500v6h4v-6H17l.5-4h-3V8.800c0-.5.300-.8 1-.8Z"/></symbol>
+  <symbol id="i-tiktok" viewBox="0 0 24 24"><path d="M14 3v12.500a4 4 0 1 1-4-4M14 3c.4 3 2.500 4.800 5.500 5"/></symbol>
+</svg>
+
+<div class="anuncio"><ul class="wrap" id="anuncio"></ul></div>
+
+<header class="sitio">
+  <div class="wrap cabecera">
+    <button class="accion abrir-menu" data-abrir="menu" aria-label="Abrir menú"><svg class="ico"><use href="#i-menu"/></svg></button>
+    <form class="buscador" id="form-buscar" role="search">
+      <input id="buscar" type="search" placeholder="Buscar carteras, mochilas, billeteras…" aria-label="Buscar productos" autocomplete="off">
+      <button type="submit" aria-label="Buscar"><svg class="ico"><use href="#i-lupa"/></svg></button>
+    </form>
+    <a class="logo" href="#inicio" aria-label="Shine Every Bags, inicio"><b>Shine Every</b><span>Bags</span></a>
+    <div class="acciones">
+      <button class="accion" data-abrir="cuenta" aria-label="Mis datos"><svg class="ico"><use href="#i-user"/></svg></button>
+      <button class="accion" id="ver-favoritos" aria-label="Ver favoritos"><svg class="ico"><use href="#i-cora"/></svg><span class="contador" id="n-fav" hidden>0</span></button>
+      <button class="accion" data-abrir="carrito" aria-label="Abrir carrito"><svg class="ico"><use href="#i-bolsa"/></svg><span class="contador" id="n-carrito">0</span></button>
+    </div>
+  </div>
+  <nav class="principal" aria-label="Principal">
+    <ul class="wrap">
+      <li><a class="nav-link destacado" href="#catalogo" data-filtro="ofertas">Ofertas</a></li>
+      <li class="con-sub"><a class="nav-link" href="#catalogo" data-filtro="carteras">Carteras <span aria-hidden="true">▾</span></a>
+        <ul class="sub">
+          <li><a href="#catalogo" data-filtro="mujer">Mujer</a></li>
+          <li><a href="#catalogo" data-filtro="hombre">Hombre</a></li>
+          <li><a href="#catalogo" data-filtro="billeteras">Billeteras</a></li>
+          <li><a href="#catalogo" data-filtro="mochilas">Mochilas</a></li>
+          <li><a href="#catalogo" data-filtro="cinturones">Cinturones</a></li>
+        </ul>
+      </li>
+      <li><a class="nav-link" href="#marcas">Marcas</a></li>
+      <li><a class="nav-link" href="#catalogo" data-filtro="novedades">Novedades</a></li>
+      <li><a class="nav-link" href="#mayorista">Venta Mayorista</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Brillá en <em>cada detalle</em></h1>
+        <p class="bajada">Carteras, mochilas y accesorios en negro y dorado para todos los días y para las noches que importan. Venta por unidad y por mayor.</p>
+        <div class="botones">
+          <a class="btn btn-oro" href="#catalogo" data-filtro="todo">Ver la colección</a>
+          <a class="btn btn-linea" href="#mayorista">Comprar por mayor</a>
+        </div>
+        <div class="promos">
+          <div><strong data-txt="descuento"></strong><span>menos pagando por transferencia</span></div>
+          <div><strong data-txt="minimo"></strong><span>compra mínima para precio mayorista</span></div>
+        </div>
+      </div>
+      <div class="vidriera" aria-hidden="true">
+        <div class="arco"></div>
+        <div class="pieza grande" data-arte="solapa,#1b1817"></div>
+        <div class="pieza mini" data-arte="sobre,#c4a56a"></div>
+        <div class="pieza chica" data-arte="billetera,#5e1f2a"></div>
+        <a class="sello" href="#catalogo" data-filtro="ofertas" tabindex="-1">HASTA<b id="max-off"></b>OFF</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="beneficios">
+    <ul class="wrap">
+      <li><svg class="ico"><use href="#i-envio"/></svg><div><h3>Envíos rápidos</h3><p>Despachamos a todo el país con seguimiento.</p></div></li>
+      <li><svg class="ico"><use href="#i-escudo"/></svg><div><h3>Compra segura</h3><p>Confirmás stock, envío y pago antes de abonar.</p></div></li>
+      <li><svg class="ico"><use href="#i-precio"/></svg><div><h3>Precios mayoristas</h3><p>Se activan solos al llegar al mínimo en tu carrito.</p></div></li>
+      <li><svg class="ico"><use href="#i-chat"/></svg><div><h3>Atención personalizada</h3><p>Te asesoramos por WhatsApp en cada pedido.</p></div></li>
+    </ul>
+  </div>
+
+  <section class="wrap bloque" id="catalogo">
+    <div class="titulo">
+      <h2 id="titulo-catalogo">La colección</h2>
+      <p>Precio por unidad y precio mayorista a la vista, para que armes tu pedido con las cuentas claras.</p>
+    </div>
+    <div class="filtros">
+      <div class="chips" id="chips" role="group" aria-label="Filtrar por categoría"></div>
+      <div class="controles">
+        <label class="campo">Marca
+          <select id="marca"></select>
+        </label>
+        <label class="campo">Ordenar por
+          <select id="orden">
+            <option value="destacados">Destacados</option>
+            <option value="menor">Precio: menor a mayor</option>
+            <option value="mayor">Precio: mayor a menor</option>
+            <option value="az">Nombre: A a Z</option>
+            <option value="za">Nombre: Z a A</option>
+          </select>
+        </label>
+      </div>
+    </div>
+    <div class="estado"><span id="resumen" aria-live="polite"></span><button class="enlace" id="limpiar" hidden>Limpiar filtros</button></div>
+    <div class="grilla" id="grilla"></div>
+  </section>
+
+  <section class="wrap" id="categorias" style="padding-bottom:72px">
+    <div class="titulo"><h2>Elegí por <em>categoría</em></h2></div>
+    <div class="categorias" id="accesos"></div>
+  </section>
+
+  <section class="marcas" id="marcas">
+    <div class="wrap bloque">
+      <div class="titulo"><h2>Nuestras marcas</h2><p>Cuatro líneas con personalidad propia. Tocá una para ver sus productos.</p></div>
+      <div class="lineas" id="lineas"></div>
+    </div>
+  </section>
+
+  <section class="wrap bloque" id="mayorista">
+    <div class="mayorista">
+      <div class="intro">
+        <h2>Venta mayorista para <em>tu negocio</em></h2>
+        <p>Para locales, showrooms y emprendimientos de reventa. Podés combinar modelos y categorías. El precio mayorista se aplica desde <strong data-txt="minimo"></strong> calculado a valores por mayor.</p>
+        <a class="btn btn-oro" id="consulta-mayorista" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+      </div>
+      <div>
+        <ol class="pasos">
+          <li><div><h3>Armá tu pedido</h3><p>Sumá productos al carrito. Una barra te muestra cuánto falta para el mínimo.</p></div></li>
+          <li><div><h3>Envialo por WhatsApp</h3><p>El mensaje sale armado con modelos, cantidades y total.</p></div></li>
+          <li><div><h3>Confirmá y recibilo</h3><p>Verificamos stock, cotizamos el envío y coordinamos el pago.</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contacto">
+  <div class="wrap cols">
+    <div>
+      <a class="logo" href="#inicio" style="display:inline-block"><b>Shine Every</b><span>Bags</span></a>
+      <p style="margin-top:16px">Carteras y accesorios por mayor y menor, con envíos a todo el país.</p>
+      <div class="redes">
+        <a data-red="instagram" aria-label="Instagram"><svg class="ico"><use href="#i-insta"/></svg></a>
+        <a data-red="facebook" aria-label="Facebook"><svg class="ico"><use href="#i-face"/></svg></a>
+        <a data-red="tiktok" aria-label="TikTok"><svg class="ico"><use href="#i-tiktok"/></svg></a>
+      </div>
+    </div>
+    <div><h4>Contacto</h4><ul id="datos-contacto"></ul></div>
+    <div><h4>Condiciones mayoristas</h4><ul>
+      <li>Compra mínima: <span data-txt="minimo"></span></li>
+      <li>Surtido libre de modelos</li>
+      <li>Precios sujetos a stock</li>
+      <li><button data-politica="mayorista">Leer todas las condiciones</button></li>
+    </ul></div>
+    <div><h4>Políticas</h4><ul>
+      <li><button data-politica="envios">Envíos</button></li>
+      <li><button data-politica="cambios">Cambios y devoluciones</button></li>
+      <li><button data-politica="pagos">Medios de pago</button></li>
+      <li><button data-politica="privacidad">Privacidad</button></li>
+    </ul></div>
+  </div>
+  <div class="wrap legal">© 2026 Shine Every Bags. Productos y precios de muestra.</div>
+</footer>
+
+<dialog class="panel izq" id="menu" aria-label="Menú">
+  <div class="panel-cab"><h2>Menú</h2><button class="accion" data-cerrar aria-label="Cerrar menú"><svg class="ico"><use href="#i-x"/></svg></button></div>
+  <div class="panel-cuerpo">
+    <ul class="menu-lista">
+      <li><a href="#catalogo" data-filtro="ofertas"><em>Ofertas</em></a></li>
+      <li><details><summary>Carteras</summary>
+        <a href="#catalogo" data-filtro="carteras">Ver todas</a>
+        <a href="#catalogo" data-filtro="mujer">Mujer</a>
+        <a href="#catalogo" data-filtro="hombre">Hombre</a>
+        <a href="#catalogo" data-filtro="billeteras">Billeteras</a>
+        <a href="#catalogo" data-filtro="mochilas">Mochilas</a>
+        <a href="#catalogo" data-filtro="cinturones">Cinturones</a>
+      </details></li>
+      <li><a href="#marcas">Marcas</a></li>
+      <li><a href="#catalogo" data-filtro="novedades">Novedades</a></li>
+      <li><a href="#mayorista">Venta Mayorista</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</dialog>
+
+<dialog class="panel" id="carrito" aria-labelledby="t-carrito">
+  <div class="panel-cab"><h2 id="t-carrito">Tu pedido</h2><button class="accion" data-cerrar aria-label="Cerrar carrito"><svg class="ico"><use href="#i-x"/></svg></button></div>
+  <div class="panel-cuerpo">
+    <div class="vacio" id="carrito-vacio"><h3>Tu carrito está vacío</h3><p>Sumá productos para armar el pedido.</p><button class="btn btn-linea" data-cerrar>Seguir mirando</button></div>
+    <div id="carrito-lleno" hidden>
+      <div id="items"></div>
+      <div class="meta"><p id="meta-texto" aria-live="polite"></p><div class="barra"><i id="meta-barra"></i></div></div>
+      <fieldset>
+        <legend>Forma de pago</legend>
+        <label class="pago"><input type="radio" name="pago" id="pago-transf" value="transferencia" checked><span id="lbl-transf"></span></label>
+        <label class="pago"><input type="radio" name="pago" id="pago-otro" value="otro"><span>Otro medio de pago, a coordinar</span></label>
+      </fieldset>
+      <dl class="totales" id="totales"></dl>
+      <div class="form" style="margin-bottom:16px">
+        <label class="campo">Nombre y apellido<input id="c-nombre" autocomplete="name"></label>
+        <label class="campo">Localidad y provincia<input id="c-localidad" autocomplete="address-level2"></label>
+        <label class="campo">Aclaraciones (colores, horarios, envío)<textarea id="c-nota" rows="2"></textarea></label>
+      </div>
+      <a class="btn btn-oro btn-ancho" id="enviar" target="_blank" rel="noopener"><svg class="ico"><use href="#i-chat"/></svg>Enviar pedido por WhatsApp</a>
+      <button class="btn btn-linea btn-ancho" id="copiar" style="margin-top:10px">Copiar pedido</button>
+      <p class="nota" id="nota-envio" aria-live="polite">El pedido se confirma cuando envías el mensaje en WhatsApp. El costo de envío se cotiza aparte.</p>
+      <label class="campo" id="caja-texto" hidden>Texto del pedido<textarea id="texto-pedido" rows="10" readonly></textarea></label>
+    </div>
+  </div>
+</dialog>
+
+<dialog class="modal" id="cuenta" aria-labelledby="t-cuenta">
+  <div class="panel-cab"><h2 id="t-cuenta">Mis datos</h2><button class="accion" data-cerrar aria-label="Cerrar"><svg class="ico"><use href="#i-x"/></svg></button></div>
+  <div class="panel-cuerpo">
+    <form class="form" id="form-cuenta">
+      <p style="color:var(--perla);font-size:13.5px">Guardalos en este dispositivo y se completan solos en tu próximo pedido.</p>
+      <label class="campo">Nombre y apellido<input id="u-nombre" autocomplete="name"></label>
+      <label class="campo">Localidad y provincia<input id="u-localidad" autocomplete="address-level2"></label>
+      <button class="btn btn-oro" type="submit">Guardar datos</button>
+    </form>
+  </div>
+</dialog>
+
+<dialog class="modal" id="politica" aria-labelledby="t-politica">
+  <div class="panel-cab"><h2 id="t-politica"></h2><button class="accion" data-cerrar aria-label="Cerrar"><svg class="ico"><use href="#i-x"/></svg></button></div>
+  <div class="panel-cuerpo" id="politica-texto"></div>
+</dialog>
+
+<div class="aviso" id="aviso" role="status"></div>
+
+<script>
+/* ============ DATOS DE LA TIENDA (editar acá) ============ */
+const TIENDA = {
+  whatsapp: "",                 // Ej: "5491122334455" (sin +, espacios ni guiones). Vacío: se elige el contacto en WhatsApp.
+  email: "",
+  direccion: "",
+  horario: "",
+  instagram: "",                // URL completa
+  facebook: "",
+  tiktok: "",
+  descuentoTransferencia: 0.10, // 10 %
+  minimoMayorista: 200000       // en pesos, a precio mayorista
+};
+
+/* precio = minorista | mayor = mayorista | antes = precio anterior (oferta) | foto = ruta de la imagen real (opcional) */
+const PRODUCTOS = [
+  {id:1, nombre:"Cartera Alba",        cat:"mujer",      marca:"Aurea",   precio:58900, mayor:39900, nuevo:true,  arte:"solapa",   color:"#1b1817"},
+  {id:2, nombre:"Tote Siena",          cat:"mujer",      marca:"Atelier", precio:64500, mayor:44500, antes:76000, arte:"tote",     color:"#8a4f27"},
+  {id:3, nombre:"Sobre Gala",          cat:"mujer",      marca:"Noir",    precio:36900, mayor:24900, nuevo:true,  arte:"sobre",    color:"#c4a56a"},
+  {id:4, nombre:"Bombonera Luna",      cat:"mujer",      marca:"Aurea",   precio:49900, mayor:33500, antes:62000, arte:"balde",    color:"#d6ccb8"},
+  {id:5, nombre:"Bandolera Ámbar",     cat:"mujer",      marca:"Urbana",  precio:42900, mayor:28900,              arte:"solapa",   color:"#5e1f2a"},
+  {id:6, nombre:"Portafolio Roma",     cat:"hombre",     marca:"Atelier", precio:79900, mayor:55900,              arte:"maletin",  color:"#5a3720"},
+  {id:7, nombre:"Morral Bruno",        cat:"hombre",     marca:"Urbana",  precio:54900, mayor:37900, antes:64900, arte:"morral",   color:"#3b4237"},
+  {id:8, nombre:"Maletín Dante",       cat:"hombre",     marca:"Noir",    precio:84900, mayor:59500, nuevo:true,  arte:"maletin",  color:"#1b1817"},
+  {id:9, nombre:"Billetera Olivia",    cat:"billeteras", marca:"Aurea",   precio:24900, mayor:15900, nuevo:true,  arte:"larga",    color:"#c4a56a"},
+  {id:10,nombre:"Billetera Franco",    cat:"billeteras", marca:"Noir",    precio:19900, mayor:12900,              arte:"billetera",color:"#1b1817"},
+  {id:11,nombre:"Monedero Perla",      cat:"billeteras", marca:"Atelier", precio:15900, mayor:9900,  antes:19900, arte:"billetera",color:"#5e1f2a"},
+  {id:12,nombre:"Mochila Nina",        cat:"mochilas",   marca:"Urbana",  precio:56900, mayor:38900, nuevo:true,  arte:"mochila",  color:"#1b1817"},
+  {id:13,nombre:"Mochila Capri",       cat:"mochilas",   marca:"Aurea",   precio:52900, mayor:35900,              arte:"mochila",  color:"#9a7b62"},
+  {id:14,nombre:"Mochila Atlas",       cat:"mochilas",   marca:"Urbana",  precio:61900, mayor:42500, antes:72900, arte:"mochila",  color:"#243c34"},
+  {id:15,nombre:"Cinturón Clásico",    cat:"cinturones", marca:"Noir",    precio:18900, mayor:11900,              arte:"cinturon", color:"#1b1817"},
+  {id:16,nombre:"Cinturón Cognac",     cat:"cinturones", marca:"Atelier", precio:21500, mayor:13900,              arte:"cinturon", color:"#8a4f27"}
+];
+const CATEGORIAS = {mujer:"Mujer",hombre:"Hombre",billeteras:"Billeteras",mochilas:"Mochilas",cinturones:"Cinturones"};
+const MARCAS = {Aurea:"Luz y líneas suaves",Atelier:"Cortes clásicos",Noir:"Negro protagonista",Urbana:"Para el día a día"};
+
+/* ============ Utilidades ============ */
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const pesos = n => "$ " + Math.round(n).toLocaleString("es-AR",{useGrouping:"always"});
+const normal = t => t.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
+const porId = id => PRODUCTOS.find(p => p.id === id);
+const leer = (k,def) => { try { const v = JSON.parse(localStorage.getItem("seb-"+k)); return v ?? def; } catch { return def; } };
+const guardar = (k,v) => { try { localStorage.setItem("seb-"+k, JSON.stringify(v)); } catch {} };
+const waUrl = texto => "https://wa.me/" + TIENDA.whatsapp.replace(/\D/g,"") + "?text=" + encodeURIComponent(texto);
+
+/* ============ Ilustraciones de producto ============ */
+let nArte = 0;
+function tono(hex, f){
+  const n = parseInt(hex.slice(1),16);
+  const c = [n>>16, n>>8&255, n&255].map(v => Math.round(f>0 ? v+(255-v)*f : v*(1+f)));
+  return `rgb(${c.join(",")})`;
+}
+function arte(tipo, color){
+  const u = "a" + (++nArte);
+  const L = `url(#${u}l)`, O = `url(#${u}o)`, S = tono(color,-.45), H = tono(color,.14);
+  const cuerpo = d => `<path d="${d}" fill="${L}" stroke="${tono(color,.28)}" stroke-width="1.5"/>`;
+  const costura = d => `<path d="${d}" fill="none" stroke="#e5c158" stroke-opacity=".55" stroke-width="1.4" stroke-dasharray="5 4"/>`;
+  const asa = (d,w=12) => `<path d="${d}" fill="none" stroke="${S}" stroke-width="${w}" stroke-linecap="round"/><path d="${d}" fill="none" stroke="${H}" stroke-width="${w*.45}" stroke-linecap="round"/>`;
+  const oro = (x,y,w,h,r=4) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}" fill="${O}"/>`;
+  const marca = (x,y,s=1) => `<path transform="translate(${x} ${y}) scale(${s})" d="M0-13C2-4 4-2 13 0 4 2 2 4 0 13-2 4-4 2-13 0-4-2-2-4 0-13Z" fill="${O}"/>`;
+  const formas = {
+    solapa: () => `<path d="M118 190C100 40 300 40 282 190" fill="none" stroke="${O}" stroke-width="9" stroke-linecap="round" stroke-dasharray="7 11"/>`
+      + cuerpo("M112 174H288Q314 174 316 200L324 302Q326 334 294 334H106Q74 334 76 302L84 200Q86 174 112 174Z")
+      + cuerpo("M112 174H288Q314 174 316 200L318 228Q268 282 200 284Q132 282 82 228L84 200Q86 174 112 174Z")
+      + costura("M94 224Q140 270 200 272Q260 270 306 224") + costura("M90 292Q94 320 112 321H288Q306 320 310 292")
+      + oro(180,260,40,40,20) + marca(200,280,1),
+    tote: () => asa("M142 176C142 62 222 62 222 176") + asa("M182 176C182 78 262 78 262 176",10)
+      + cuerpo("M84 160H316L332 316Q334 338 312 338H88Q66 338 68 316Z")
+      + costura("M98 175H302L316 322H84Z") + oro(130,160,24,20) + oro(246,160,24,20) + marca(200,252,1.8),
+    sobre: () => cuerpo("M70 162H330Q344 162 344 176V300Q344 314 330 314H70Q56 314 56 300V176Q56 162 70 162Z")
+      + cuerpo("M62 164H338L212 254Q200 262 188 254Z") + costura("M90 174L200 249L310 174") + costura("M70 300H330")
+      + `<circle cx="200" cy="252" r="19" fill="${O}"/>` + marca(200,252,.8).replace(O,S),
+    balde: () => asa("M130 170C130 52 270 52 270 170")
+      + cuerpo("M112 160Q200 190 288 160L310 312Q312 330 292 335Q200 354 108 335Q88 330 90 312Z")
+      + `<ellipse cx="200" cy="160" rx="88" ry="17" fill="${S}" stroke="${O}" stroke-width="3"/>`
+      + `<path d="M116 196Q200 224 284 196" fill="none" stroke="${O}" stroke-width="3.500"/><path d="M200 210q-14 28-10 52M200 210q18 24 22 44" fill="none" stroke="${O}" stroke-width="3"/>`
+      + oro(184,261,12,22,6) + oro(217,251,12,22,6) + costura("M106 316Q200 340 294 316"),
+    maletin: () => asa("M156 150V128Q156 108 178 108H222Q244 108 244 128V150",13)
+      + cuerpo("M76 146H324Q344 146 344 166V308Q344 328 324 328H76Q56 328 56 308V166Q56 146 76 146Z")
+      + cuerpo("M58 160Q60 146 76 146H324Q340 146 342 160L338 218Q336 232 320 232H80Q64 232 62 218Z")
+      + costura("M72 160H328L324 218H76Z") + costura("M72 314H328")
+      + oro(112,212,30,42) + oro(258,212,30,42) + oro(120,224,14,18,2).replace(O,S) + oro(266,224,14,18,2).replace(O,S) + marca(200,189),
+    morral: () => asa("M92 190C80 20 320 20 308 190",14)
+      + cuerpo("M92 162H308Q326 162 326 180V316Q326 336 306 336H94Q74 336 74 316V180Q74 162 92 162Z")
+      + cuerpo("M74 180Q74 162 92 162H308Q326 162 326 180V258Q326 272 310 272H90Q74 272 74 258Z")
+      + costura("M88 176H312V258H88Z") + asa("M138 200V306",16) + asa("M262 200V306",16)
+      + oro(122,264,32,20) + oro(246,264,32,20) + marca(200,218,1.2),
+    mochila: () => asa("M168 112C168 52 232 52 232 112",10) + asa("M124 190Q66 220 100 322",17) + asa("M276 190Q334 220 300 322",17)
+      + cuerpo("M110 318V190Q110 98 200 98Q290 98 290 190V318Q290 342 266 342H134Q110 342 110 318Z")
+      + `<path d="M126 218Q130 128 200 128Q270 128 274 218" fill="none" stroke="${O}" stroke-width="4"/>`
+      + cuerpo("M140 236H260Q276 236 276 252V306Q276 324 258 324H142Q124 324 124 306V252Q124 236 140 236Z")
+      + `<path d="M138 258H262" stroke="${O}" stroke-width="4"/>` + oro(244,255,8,28) + oro(262,206,8,28) + marca(200,186,1.4),
+    billetera: () => `<g transform="rotate(-12 200 220)">` + cuerpo("M106 122H272Q286 122 286 136V250H92V136Q92 122 106 122Z") + `</g>`
+      + cuerpo("M100 168H304Q320 168 320 184V300Q320 316 304 316H100Q84 316 84 300V184Q84 168 100 168Z")
+      + costura("M97 181H307V303H97Z") + oro(276,220,56,44,8) + `<circle cx="297" cy="242" r="8" fill="${S}"/>` + marca(172,242,1.5),
+    larga: () => cuerpo("M70 166H330Q348 166 348 184V292Q348 310 330 310H70Q52 310 52 292V184Q52 166 70 166Z")
+      + `<path d="M66 188H334" stroke="${O}" stroke-width="5" stroke-dasharray="3 2"/>` + oro(300,184,12,46,6)
+      + costura("M66 204H334V296H66Z") + marca(200,250,1.7),
+    cinturon: () => `<g fill="none" stroke-linecap="round">`
+      + [["200 112a108 100 0 1 1-1 0",34],["200 154a63 58 0 1 1-1 0",30]].map(([d,w]) =>
+          `<path d="M${d}" stroke="${S}" stroke-width="${w}"/><path d="M${d}" stroke="${L}" stroke-width="${w-6}"/><path d="M${d}" stroke="#e5c158" stroke-opacity=".5" stroke-width="1.3" stroke-dasharray="5 4"/>`).join("")
+      + `<path d="M170 308Q250 330 340 296" stroke="${S}" stroke-width="34"/><path d="M170 308Q250 330 340 296" stroke="${H}" stroke-width="27"/></g>`
+      + `<rect x="130" y="282" width="68" height="58" rx="10" fill="none" stroke="${O}" stroke-width="11"/><path d="M162 311H214" stroke="${O}" stroke-width="7" stroke-linecap="round"/>`
+      + [272,296,318].map((x,i)=>`<circle cx="${x}" cy="${316-i*7}" r="3.500" fill="${S}"/>`).join("")
+  };
+  return `<svg viewBox="0 0 400 400" aria-hidden="true"><defs>
+    <linearGradient id="${u}l" gradientUnits="userSpaceOnUse" x1="90" y1="90" x2="310" y2="350"><stop offset="0" stop-color="${tono(color,.24)}"/><stop offset=".45" stop-color="${color}"/><stop offset="1" stop-color="${tono(color,-.4)}"/></linearGradient>
+    <linearGradient id="${u}o" gradientUnits="userSpaceOnUse" x1="60" y1="60" x2="340" y2="340"><stop offset="0" stop-color="#fbe9a6"/><stop offset=".35" stop-color="#d4af37"/><stop offset=".55" stop-color="#f3d878"/><stop offset="1" stop-color="#9c7a1e"/></linearGradient>
+    </defs><ellipse cx="200" cy="346" rx="150" ry="15" fill="#000" opacity=".38"/>${formas[tipo]()}</svg>`;
+}
+const imagen = p => p.foto ? `<img src="${p.foto}" alt="${p.nombre}" loading="lazy">` : arte(p.arte, p.color);
+
+/* ============ Estado ============ */
+const idsValidos = new Set(PRODUCTOS.map(p => p.id));
+let carrito = leer("carrito",[]).filter(i => idsValidos.has(i.id) && i.q > 0);
+let favoritos = new Set(leer("favoritos",[]).filter(id => idsValidos.has(id)));
+const filtro = {cat:"todo", marca:"", texto:"", orden:"destacados"};
+
+let relojAviso;
+function avisar(t){
+  const a = $("#aviso"); a.textContent = t; a.classList.add("ver");
+  clearTimeout(relojAviso); relojAviso = setTimeout(() => a.classList.remove("ver"), 2600);
+}
+
+/* ============ Catálogo ============ */
+const CHIPS = [["todo","Todo"],["ofertas","Ofertas"],["novedades","Novedades"],...Object.entries(CATEGORIAS),["favoritos","Favoritos"]];
+const TITULOS = {todo:"La colección",carteras:"Carteras",ofertas:"Ofertas",novedades:"Novedades",favoritos:"Tus favoritos",...CATEGORIAS};
+const enCategoria = (p,c) =>
+  c==="todo" ? true : c==="ofertas" ? !!p.antes : c==="novedades" ? !!p.nuevo :
+  c==="favoritos" ? favoritos.has(p.id) : c==="carteras" ? (p.cat==="mujer"||p.cat==="hombre") : p.cat===c;
+
+function pintarCatalogo(){
+  const palabras = normal(filtro.texto).split(/\s+/).filter(Boolean);
+  const lista = PRODUCTOS.filter(p => {
+    const t = normal(`${p.nombre} ${CATEGORIAS[p.cat]} ${p.marca} ${p.cat==="mujer"||p.cat==="hombre"?"cartera bolso":""}`);
+    return enCategoria(p,filtro.cat) && (!filtro.marca || p.marca===filtro.marca) && palabras.every(w => t.includes(w));
+  });
+  const orden = {menor:(a,b)=>a.precio-b.precio, mayor:(a,b)=>b.precio-a.precio,
+    az:(a,b)=>a.nombre.localeCompare(b.nombre,"es"), za:(a,b)=>b.nombre.localeCompare(a.nombre,"es")}[filtro.orden];
+  if(orden) lista.sort(orden);
+
+  $("#grilla").innerHTML = lista.length ? lista.map(p => `
+    <article class="producto">
+      <div class="foto">
+        ${p.antes ? `<span class="etiqueta">${Math.round((1-p.precio/p.antes)*100)}% OFF</span>` : p.nuevo ? `<span class="etiqueta nuevo">Nuevo</span>` : ""}
+        <button class="fav" data-fav="${p.id}" aria-pressed="${favoritos.has(p.id)}" aria-label="Favorito: ${p.nombre}"><svg class="ico"><use href="#i-cora"/></svg></button>
+        ${imagen(p)}
+      </div>
+      <p class="linea-nombre">${p.marca} · ${CATEGORIAS[p.cat]}</p>
+      <h3>${p.nombre}</h3>
+      <div class="precios">
+        <p class="precio">${pesos(p.precio)}${p.antes ? ` <s aria-label="Antes ${pesos(p.antes)}">${pesos(p.antes)}</s>` : ""}</p>
+        <p class="mayor">Mayorista ${pesos(p.mayor)}</p>
+      </div>
+      <button class="btn btn-ancho" data-agregar="${p.id}">Agregar al carrito</button>
+    </article>`).join("")
+  : `<div class="vacio"><h3>${filtro.cat==="favoritos" && !favoritos.size ? "Todavía no guardaste favoritos" : "No encontramos productos"}</h3>
+     <p>${filtro.cat==="favoritos" && !favoritos.size ? "Tocá el corazón de un producto para guardarlo acá." : "Probá con otra palabra o quitá algún filtro."}</p>
+     <button class="btn btn-linea" data-limpiar>Ver todos los productos</button></div>`;
+
+  $("#titulo-catalogo").textContent = TITULOS[filtro.cat];
+  $("#resumen").textContent = `${lista.length} ${lista.length===1?"producto":"productos"}`
+    + (filtro.marca ? ` de ${filtro.marca}` : "") + (filtro.texto.trim() ? ` para “${filtro.texto.trim()}”` : "");
+  $("#limpiar").hidden = filtro.cat==="todo" && !filtro.marca && !filtro.texto;
+  $$("#chips .chip").forEach(c => c.setAttribute("aria-pressed", c.dataset.chip===filtro.cat));
+  $("#marca").value = filtro.marca;
+}
+function reiniciar(cat="todo", marca=""){
+  Object.assign(filtro,{cat,marca,texto:""}); $("#buscar").value = ""; pintarCatalogo();
+}
+function pintarFav(){ const n = $("#n-fav"); n.textContent = favoritos.size; n.hidden = !favoritos.size; }
+const irA = id => $(id).scrollIntoView();
+
+/* ============ Carrito ============ */
+function calcular(){
+  const lineas = carrito.map(i => ({...i, p:porId(i.id)}));
+  const unidades = lineas.reduce((s,l) => s+l.q, 0);
+  const minorista = lineas.reduce((s,l) => s+l.q*l.p.precio, 0);
+  const aMayor = lineas.reduce((s,l) => s+l.q*l.p.mayor, 0);
+  const esMayor = aMayor >= TIENDA.minimoMayorista;
+  const subtotal = esMayor ? aMayor : minorista;
+  const transf = $('input[name="pago"]:checked').value === "transferencia";
+  const descuento = transf ? Math.round(subtotal * TIENDA.descuentoTransferencia) : 0;
+  return {lineas, unidades, minorista, aMayor, esMayor, subtotal, transf, descuento, total:subtotal-descuento};
+}
+function textoPedido(c){
+  const nombre = $("#c-nombre").value.trim(), loc = $("#c-localidad").value.trim(), nota = $("#c-nota").value.trim();
+  return [
+    "¡Hola Shine Every Bags! Quiero hacer este pedido:", "",
+    ...c.lineas.map(l => { const u = c.esMayor ? l.p.mayor : l.p.precio; return `• ${l.q} x ${l.p.nombre} (${pesos(u)} c/u) = ${pesos(u*l.q)}`; }), "",
+    `Tipo de compra: ${c.esMayor ? "Mayorista" : "Minorista"}`,
+    `Unidades: ${c.unidades}`,
+    `Subtotal: ${pesos(c.subtotal)}`,
+    ...(c.descuento ? [`Descuento por transferencia: -${pesos(c.descuento)}`] : []),
+    `TOTAL: ${pesos(c.total)} (sin envío)`,
+    `Pago: ${c.transf ? "Transferencia bancaria" : "A coordinar"}`,
+    ...(nombre ? ["", `Nombre: ${nombre}`] : []),
+    ...(loc ? [`Localidad: ${loc}`] : []),
+    ...(nota ? [`Aclaraciones: ${nota}`] : [])
+  ].join("\n");
+}
+function pintarResumen(){
+  const c = calcular(), min = TIENDA.minimoMayorista, pct = Math.round(TIENDA.descuentoTransferencia*100);
+  $("#n-carrito").textContent = c.unidades;
+  $("#carrito-vacio").hidden = c.unidades > 0;
+  $("#carrito-lleno").hidden = c.unidades === 0;
+  $("#meta-texto").innerHTML = c.esMayor
+    ? `<strong style="color:var(--champagne)">Precio mayorista activado.</strong> Ahorrás ${pesos(c.minorista-c.aMayor)} frente al precio por unidad.`
+    : `Te faltan <strong style="color:var(--champagne)">${pesos(min-c.aMayor)}</strong> (a precio mayorista) para comprar por mayor.`;
+  $("#meta-barra").style.width = Math.min(100, c.aMayor/min*100) + "%";
+  $("#lbl-transf").textContent = `Transferencia bancaria (${pct}% de descuento)`;
+  $("#totales").innerHTML = `
+    <div><dt>Subtotal ${c.esMayor ? "mayorista" : "minorista"} (${c.unidades} u.)</dt><dd>${pesos(c.subtotal)}</dd></div>
+    ${c.transf
+      ? `<div class="desc"><dt>Descuento por transferencia</dt><dd>− ${pesos(c.descuento)}</dd></div>`
+      : `<div class="desc"><dt>Con transferencia pagarías</dt><dd>${pesos(c.subtotal-Math.round(c.subtotal*TIENDA.descuentoTransferencia))}</dd></div>`}
+    <div class="total"><dt>Total</dt><dd>${pesos(c.total)}</dd></div>`;
+  const texto = textoPedido(c);
+  $("#enviar").href = waUrl(texto);
+  $("#texto-pedido").value = texto;
+}
+function pintarCarrito(){
+  const c = calcular();
+  $("#items").innerHTML = c.lineas.map(l => { const u = c.esMayor ? l.p.mayor : l.p.precio; return `
+    <div class="item">
+      <div class="foto">${imagen(l.p)}</div>
+      <div><h3>${l.p.nombre}</h3><small>${pesos(u)} c/u</small>
+        <div class="cantidad">
+          <button data-delta="-1" data-id="${l.id}" aria-label="Restar una unidad de ${l.p.nombre}">−</button>
+          <input type="number" id="q-${l.id}" data-id="${l.id}" value="${l.q}" min="1" max="999" inputmode="numeric" aria-label="Cantidad de ${l.p.nombre}">
+          <button data-delta="1" data-id="${l.id}" aria-label="Sumar una unidad de ${l.p.nombre}">+</button>
+        </div>
+      </div>
+      <div class="der"><span>${pesos(u*l.q)}</span><button class="quitar" data-quitar="${l.id}">Quitar</button></div>
+    </div>`; }).join("");
+  pintarResumen();
+}
+function fijarCantidad(id, q){
+  q = Math.max(0, Math.min(999, Math.floor(q) || 0));
+  const i = carrito.find(x => x.id === id);
+  if(!q) carrito = carrito.filter(x => x.id !== id);
+  else if(i) i.q = q;
+  else carrito.push({id,q});
+  guardar("carrito",carrito); pintarCarrito();
+}
+
+/* ============ Eventos ============ */
+document.addEventListener("click", e => {
+  const t = e.target.closest("button,a");
+  if(e.target.tagName === "DIALOG"){ // clic fuera del panel
+    const r = e.target.getBoundingClientRect();
+    if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom) e.target.close();
+    return;
+  }
+  if(!t) return;
+  const d = t.dataset;
+  if(d.abrir){ const dlg = document.getElementById(d.abrir); if(d.abrir==="carrito") pintarCarrito(); dlg.showModal(); }
+  if("cerrar" in d) t.closest("dialog").close();
+  if(d.filtro){ e.preventDefault(); t.closest("dialog")?.close(); reiniciar(d.filtro); irA("#catalogo"); t.closest(".con-sub")?.classList.add("cerrado"); t.blur(); }
+  else if(t.closest("#menu") && t.hash){ e.preventDefault(); $("#menu").close(); irA(t.hash); }
+  if(d.chip){ filtro.cat = d.chip; pintarCatalogo(); }
+  if(d.marcaIr){ reiniciar("todo", d.marcaIr); irA("#catalogo"); }
+  if("limpiar" in d || t.id==="limpiar") reiniciar();
+  if(d.fav){
+    const id = +d.fav, estaba = favoritos.has(id);
+    estaba ? favoritos.delete(id) : favoritos.add(id);
+    guardar("favoritos",[...favoritos]); pintarFav();
+    if(filtro.cat==="favoritos") pintarCatalogo(); else t.setAttribute("aria-pressed", !estaba);
+    avisar(estaba ? "Quitado de favoritos" : "Guardado en favoritos");
+  }
+  if(d.agregar){
+    const id = +d.agregar;
+    fijarCantidad(id, (carrito.find(x => x.id===id)?.q || 0) + 1);
+    const n = $("#n-carrito"); n.classList.remove("salto"); void n.offsetWidth; n.classList.add("salto");
+    t.classList.add("listo"); t.textContent = "Agregado ✓";
+    setTimeout(() => { t.classList.remove("listo"); t.textContent = "Agregar al carrito"; }, 1300);
+    avisar(`${porId(id).nombre} está en tu carrito`);
+  }
+  if(d.delta){
+    const id = +d.id; fijarCantidad(id, carrito.find(x => x.id===id).q + +d.delta);
+    $(`.cantidad button[data-id="${id}"][data-delta="${d.delta}"]`)?.focus();
+  }
+  if(d.quitar) fijarCantidad(+d.quitar, 0);
+  if(d.politica){ const [titulo,parrafos] = POLITICAS[d.politica]; $("#t-politica").textContent = titulo; $("#politica-texto").innerHTML = parrafos.map(x=>`<p>${x}</p>`).join(""); $("#politica").showModal(); }
+  if(d.red && !TIENDA[d.red]) avisar("Enlace de la red social pendiente de cargar");
+});
+$$(".con-sub").forEach(li => ["mouseleave","focusout"].forEach(ev => li.addEventListener(ev, () => li.classList.remove("cerrado"))));
+$("#items").addEventListener("change", e => { if(e.target.dataset.id) fijarCantidad(+e.target.dataset.id, +e.target.value); });
+$("#carrito").addEventListener("input", e => { if(e.target.closest("fieldset,.form")) pintarResumen(); });
+$("#carrito").addEventListener("change", e => { if(e.target.name==="pago") pintarResumen(); });
+$("#copiar").addEventListener("click", () => {
+  const nota = $("#nota-envio");
+  const manual = () => { $("#caja-texto").hidden = false; $("#texto-pedido").select(); nota.textContent = "Seleccionamos el texto del pedido para que lo copies."; };
+  if(!navigator.clipboard) return manual();
+  navigator.clipboard.writeText($("#texto-pedido").value)
+    .then(() => nota.textContent = "Pedido copiado. Pegalo en tu chat de WhatsApp.").catch(manual);
+});
+$("#buscar").addEventListener("input", e => {
+  if(filtro.texto === "" && e.target.value){ filtro.cat = "todo"; filtro.marca = ""; }
+  filtro.texto = e.target.value; pintarCatalogo();
+});
+$("#form-buscar").addEventListener("submit", e => { e.preventDefault(); $("#buscar").blur(); irA("#catalogo"); });
+$("#marca").addEventListener("change", e => { filtro.marca = e.target.value; pintarCatalogo(); });
+$("#orden").addEventListener("change", e => { filtro.orden = e.target.value; pintarCatalogo(); });
+$("#ver-favoritos").addEventListener("click", () => { reiniciar("favoritos"); irA("#catalogo"); });
+$("#form-cuenta").addEventListener("submit", e => {
+  e.preventDefault();
+  const u = {nombre:$("#u-nombre").value.trim(), localidad:$("#u-localidad").value.trim()};
+  guardar("datos",u); $("#c-nombre").value = u.nombre; $("#c-localidad").value = u.localidad;
+  $("#cuenta").close(); avisar("Datos guardados para tu pedido");
+});
+
+/* ============ Inicio ============ */
+const PCT = Math.round(TIENDA.descuentoTransferencia*100);
+const POLITICAS = {
+  mayorista:["Condiciones mayoristas",[`Compra mínima de ${pesos(TIENDA.minimoMayorista)} calculada a precio mayorista. Podés combinar modelos y categorías.`,"Los precios y el stock se confirman al recibir el pedido. El costo de envío no está incluido."]],
+  envios:["Envíos",["Enviamos a todo el país por correo o transporte. El costo y el plazo se informan según tu localidad antes de que pagues."]],
+  cambios:["Cambios y devoluciones",["Escribinos dentro de los 10 días de recibido el producto. Tiene que estar sin uso y con sus etiquetas.","En compras a distancia tenés derecho a arrepentirte dentro de los 10 días corridos, según la Ley 24.240 de Defensa del Consumidor."]],
+  pagos:["Medios de pago",[`Por transferencia bancaria tenés ${PCT}% de descuento. Otros medios se coordinan por WhatsApp.`]],
+  privacidad:["Privacidad",["Tu nombre, localidad, favoritos y carrito se guardan en tu dispositivo. Los datos del pedido nos llegan cuando envías el mensaje por WhatsApp."]]
+};
+$("#anuncio").innerHTML = [
+  "Envíos a todo el país",
+  `${PCT}% OFF pagando por transferencia bancaria`,
+  `Compra mínima mayorista: ${pesos(TIENDA.minimoMayorista)}`
+].map((t,i) => `<li class="${i?"":"activo"}">${t}</li>`).join("");
+let turno = 0;
+setInterval(() => { const l = $$("#anuncio li"); l[turno].classList.remove("activo"); turno = (turno+1)%l.length; l[turno].classList.add("activo"); }, 4000);
+$$('[data-txt="descuento"]').forEach(x => x.textContent = PCT + "%");
+$$('[data-txt="minimo"]').forEach(x => x.textContent = pesos(TIENDA.minimoMayorista));
+$("#max-off").textContent = Math.max(0,...PRODUCTOS.filter(p=>p.antes).map(p => Math.round((1-p.precio/p.antes)*100))) + "%";
+$$("[data-arte]").forEach(x => x.innerHTML = arte(...x.dataset.arte.split(",")));
+$("#chips").innerHTML = CHIPS.map(([k,v]) => `<button class="chip" data-chip="${k}" aria-pressed="false">${k==="favoritos"?'<svg class="ico"><use href="#i-cora"/></svg>':""}${v}</button>`).join("");
+$("#marca").innerHTML = `<option value="">Todas</option>` + Object.keys(MARCAS).map(m => `<option>${m}</option>`).join("");
+const MUESTRA = {mujer:["tote","#8a4f27"],hombre:["maletin","#5a3720"],billeteras:["billetera","#c4a56a"],mochilas:["mochila","#1b1817"],cinturones:["cinturon","#1b1817"]};
+$("#accesos").innerHTML = Object.entries(CATEGORIAS).map(([k,v]) => `<a class="cat" href="#catalogo" data-filtro="${k}">${arte(...MUESTRA[k])}<h3>${v}</h3><span>Ver ${PRODUCTOS.filter(p=>p.cat===k).length} productos</span></a>`).join("");
+$("#lineas").innerHTML = Object.entries(MARCAS).map(([m,d]) => `<button class="marca" data-marca-ir="${m}"><b>${m}</b><span>${d}</span></button>`).join("");
+$("#datos-contacto").innerHTML = [
+  `<li><a href="${waUrl("¡Hola Shine Every Bags! Tengo una consulta.")}" target="_blank" rel="noopener">${TIENDA.whatsapp ? "WhatsApp: +" + TIENDA.whatsapp : "Escribinos por WhatsApp"}</a></li>`,
+  `<li>Email: ${TIENDA.email || "a confirmar"}</li>`,
+  `<li>Dirección: ${TIENDA.direccion || "a confirmar"}</li>`,
+  `<li>Horario: ${TIENDA.horario || "a confirmar"}</li>`
+].join("");
+$$("[data-red]").forEach(a => { const url = TIENDA[a.dataset.red]; if(url){ a.href = url; a.target = "_blank"; a.rel = "noopener"; } else a.href = "#contacto"; });
+$("#consulta-mayorista").href = waUrl("¡Hola Shine Every Bags! Quiero información sobre la venta mayorista.");
+const datos = leer("datos",{});
+$("#u-nombre").value = $("#c-nombre").value = datos.nombre || "";
+$("#u-localidad").value = $("#c-localidad").value = datos.localidad || "";
+pintarCatalogo(); pintarFav(); pintarCarrito();
+</script>
+
+</body></html>
